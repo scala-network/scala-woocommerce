@@ -17,7 +17,7 @@
     </tr>
     <tr>
         <td>Order age</td>
-        <td><?php echo Monero_Gateway::format_seconds_to_time($details['order_age']) ?> ago</td>
+        <td><?php echo Scala_Gateway::format_seconds_to_time($details['order_age']) ?> ago</td>
     </tr>
     <tr>
         <td>Order exipires</td>

@@ -1,19 +1,19 @@
 <?php
 /**
- * monero_wallet_rpc
+ * scala_wallet_rpc
  *
  * Written using the JSON RPC specification -
  * http://json-rpc.org/wiki/specification
  *
  * @author Kacper Rowinski <krowinski@implix.com>
  * http://implix.com
- * Modified to work with monero-rpc wallet by Serhack and cryptochangements
- * Modified to work with monero-wallet-rpc wallet by mosu-forge
+ * Modified to work with scala-rpc wallet by Serhack and cryptochangements
+ * Modified to work with scala-wallet-rpc wallet by mosu-forge
  */
 
 defined( 'ABSPATH' ) || exit;
 
-class Monero_Wallet_Rpc
+class Scala_Wallet_Rpc
 {
     protected $url = null, $is_debug = false;
     protected $curl_options = array(
@@ -178,7 +178,7 @@ class Monero_Wallet_Rpc
         // check for curl error
         if (0 < curl_errno($ch)) {
             if(is_admin())
-                echo '[ERROR] Failed to connect to monero-wallet-rpc at ' . $this->host . ' port '. $this->port .'</br>';
+                echo '[ERROR] Failed to connect to scala-wallet-rpc at ' . $this->host . ' port '. $this->port .'</br>';
         }
         // close the connection
         curl_close($ch);
@@ -214,7 +214,7 @@ class Monero_Wallet_Rpc
     }
 
     /*
-     * The following functions can all be called to interact with the Monero RPC wallet
+     * The following functions can all be called to interact with the Scala RPC wallet
      * They will majority of them will return the result as an array
      * Example: $daemon->address(); where $daemon is an instance of this class, will return the wallet address as string within an array
      */

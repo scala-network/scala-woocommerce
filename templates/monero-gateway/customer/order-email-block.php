@@ -4,7 +4,7 @@
     <?php echo $method_title ?>
 </h2>
 
-<p style="margin: 0 0 16px;">Your order has been confirmed. Thank you for paying with Monero!</p>
+<p style="margin: 0 0 16px;">Your order has been confirmed. Thank you for paying with Scala!</p>
 
 <?php elseif($details['status'] == 'expired' || $details['status'] == 'expired_partial'): ?>
 

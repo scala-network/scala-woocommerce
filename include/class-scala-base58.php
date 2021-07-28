@@ -1,16 +1,16 @@
 <?php
 /**
  *
- * monerophp/base58
+ * scalaphp/base58
  *
  * A PHP Base58 codec
- * https://github.com/monero-integrations/monerophp
+ * https://github.com/scala-integrations/scalaphp
  *
  * Using work from
- *   bigreddmachine [MoneroPy] (https://github.com/bigreddmachine)
- *   Paul Shapiro [mymonero-core-js] (https://github.com/paulshapiro)
+ *   bigreddmachine [ScalaPy] (https://github.com/bigreddmachine)
+ *   Paul Shapiro [myscala-core-js] (https://github.com/paulshapiro)
  *
- * @author     Monero Integrations Team <support@monerointegrations.com> (https://github.com/monero-integrations)
+ * @author     Scala Integrations Team <support@scalaintegrations.com> (https://github.com/scala-integrations)
  * @copyright  2018
  * @license    MIT
  *
@@ -26,7 +26,7 @@
  * $decoded = $base58->decode('479cG5opa54beQWSyqNoWw5tna9sHUNmMTtiFqLPaUhDevpJ2YLwXAggSx5ePdeFrYF8cdbmVRSmp1Kn3t4Y9kFu7rZ7pFw');
  *
  */
-class Monero_base58
+class Scala_base58
 {
   static $alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
   static $encoded_block_sizes = [0, 2, 3, 5, 6, 7, 9, 10, 11];

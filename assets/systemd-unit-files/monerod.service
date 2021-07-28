@@ -1,14 +1,14 @@
 [Unit]
-Description=Monero Full Node
+Description=Scala Full Node
 After=network.target
 
 [Service]
-User=moneroservices
-Group=moneroservices
-WorkingDirectory=/opt/monero-data-dir
+User=scalaservices
+Group=scalaservices
+WorkingDirectory=/opt/scala-data-dir
 Type=simple
 LimitNOFILE=65535
-ExecStart=/usr/bin/monerod --log-file /var/log/monerod.log --data-dir /opt/monero-data-dir --non-interactive
+ExecStart=/usr/bin/scalad --log-file /var/log/scalad.log --data-dir /opt/scala-data-dir --non-interactive
 Restart=always
 [Install]
 WantedBy=multi-user.target

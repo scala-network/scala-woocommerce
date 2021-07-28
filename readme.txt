@@ -1,18 +1,18 @@
-=== Monero WooCommerce Extension ===
-Contributors: serhack, mosu-forge and Monero Integrations contributors
-Donate link: http://monerointegrations.com/donate.html
-Tags: monero, woocommerce, integration, payment, merchant, cryptocurrency, accept monero, monero woocommerce
+=== Scala WooCommerce Extension ===
+Contributors: serhack, mosu-forge and Scala Integrations contributors
+Donate link: http://scalaintegrations.com/donate.html
+Tags: scala, woocommerce, integration, payment, merchant, cryptocurrency, accept scala, scala woocommerce
 Requires at least: 4.0
 Tested up to: 5.7.2
 Stable tag: trunk
 License: MIT license
-License URI: https://github.com/monero-integrations/monerowp/blob/master/LICENSE
+License URI: https://github.com/scala-network/scala-woocommerce/blob/master/LICENSE
  
-Monero WooCommerce Extension is a Wordpress plugin that allows to accept monero at WooCommerce-powered online stores.
+Scala WooCommerce Extension is a Wordpress plugin that allows to accept scala at WooCommerce-powered online stores.
 
 = Benefits =
 
-* Payment validation done through either `monero-wallet-rpc` or the [xmrchain.net blockchain explorer](https://xmrchain.net/).
+* Payment validation done through either `scala-wallet-rpc` or the [xmrchain.net blockchain explorer](https://xmrchain.net/).
 * Validates payments with `cron`, so does not require users to stay on the order confirmation page for their order to validate.
 * Order status updates are done through AJAX instead of Javascript page reloads.
 * Customers can pay with multiple transactions and are notified as soon as transactions hit the mempool.
@@ -20,45 +20,45 @@ Monero WooCommerce Extension is a Wordpress plugin that allows to accept monero 
 * Live price updates every minute; total amount due is locked in after the order is placed for a configurable amount of time (default 60 minutes) so the price does not change after order has been made.
 * Hooks into emails, order confirmation page, customer order history page, and admin order details page.
 * View all payments received to your wallet with links to the blockchain explorer and associated orders.
-* Optionally display all prices on your store in terms of Monero.
+* Optionally display all prices on your store in terms of Scala.
 * Shortcodes! Display exchange rates in numerous currencies.
 
 = Installation =
 
 == Automatic method ==
 
-In the "Add Plugins" section of the WordPress admin UI, search for "monero" and click the Install Now button next to "Monero WooCommerce Extension" by mosu-forge, SerHack.  This will enable auto-updates, but only for official releases, so if you need to work from git master or your local fork, please use the manual method below.
+In the "Add Plugins" section of the WordPress admin UI, search for "scala" and click the Install Now button next to "Scala WooCommerce Extension" by mosu-forge, SerHack.  This will enable auto-updates, but only for official releases, so if you need to work from git master or your local fork, please use the manual method below.
 
 == Manual method == 
 
-* Download the plugin from the releases page (https://github.com/monero-integrations/monerowp) or clone with `git clone https://github.com/monero-integrations/monerowp`
-* Unzip or place the `monero-woocommerce-gateway` folder in the `wp-content/plugins` directory.
-* Activate "Monero Woocommerce Gateway" in your WordPress admin dashboard.
+* Download the plugin from the releases page (https://github.com/scala-network/scala-woocommerce) or clone with `git clone https://github.com/scala-network/scala-woocommerce`
+* Unzip or place the `scala-woocommerce-gateway` folder in the `wp-content/plugins` directory.
+* Activate "Scala Woocommerce Gateway" in your WordPress admin dashboard.
 * It is highly recommended that you use native cronjobs instead of WordPress's "Poor Man's Cron" by adding `define('DISABLE_WP_CRON', true);` into your `wp-config.php` file and adding `* * * * * wget -q -O - https://yourstore.com/wp-cron.php?doing_wp_cron >/dev/null 2>&1` to your crontab.
 
 = Configuration =
 
 == Option 1: Use your wallet address and viewkey ==
 
-This is the easiest way to start accepting Monero on your website. You'll need:
+This is the easiest way to start accepting Scala on your website. You'll need:
 
-* Your Monero wallet address starting with `4`
+* Your Scala wallet address starting with `4`
 * Your wallet's secret viewkey
 
 Then simply select the `viewkey` option in the settings page and paste your address and viewkey. You're all set!
 
-Note on privacy: when you validate transactions with your private viewkey, your viewkey is sent to (but not stored on) xmrchain.net over HTTPS. This could potentially allow an attacker to see your incoming, but not outgoing, transactions if they were to get his hands on your viewkey. Even if this were to happen, your funds would still be safe and it would be impossible for somebody to steal your money. For maximum privacy use your own `monero-wallet-rpc` instance.
+Note on privacy: when you validate transactions with your private viewkey, your viewkey is sent to (but not stored on) xmrchain.net over HTTPS. This could potentially allow an attacker to see your incoming, but not outgoing, transactions if they were to get his hands on your viewkey. Even if this were to happen, your funds would still be safe and it would be impossible for somebody to steal your money. For maximum privacy use your own `scala-wallet-rpc` instance.
 
-== Option 2: Using monero wallet rpc ==
+== Option 2: Using scala wallet rpc ==
 
-The most secure way to accept Monero on your website. You'll need:
+The most secure way to accept Scala on your website. You'll need:
 
 * Root access to your webserver
-* Latest [Monero-currency binaries](https://github.com/monero-project/monero/releases)
+* Latest [Scala-currency binaries](https://github.com/scala-project/scala/releases)
 
-After downloading (or compiling) the Monero binaries on your server, install the [systemd unit files](https://github.com/monero-integrations/monerowp/tree/master/assets/systemd-unit-files) or run `monerod` and `monero-wallet-rpc` with `screen` or `tmux`. You can skip running `monerod` by using a remote node with `monero-wallet-rpc` by adding `--daemon-address node.moneroworld.com:18089` to the `monero-wallet-rpc.service` file.
+After downloading (or compiling) the Scala binaries on your server, install the [systemd unit files](https://github.com/scala-network/scala-woocommerce/tree/master/assets/systemd-unit-files) or run `scalad` and `scala-wallet-rpc` with `screen` or `tmux`. You can skip running `scalad` by using a remote node with `scala-wallet-rpc` by adding `--daemon-address node.scalaworld.com:18089` to the `scala-wallet-rpc.service` file.
 
-Note on security: using this option, while the most secure, requires you to run the Monero wallet RPC program on your server. Best practice for this is to use a view-only wallet since otherwise your server would be running a hot-wallet and a security breach could allow hackers to empty your funds.
+Note on security: using this option, while the most secure, requires you to run the Scala wallet RPC program on your server. Best practice for this is to use a view-only wallet since otherwise your server would be running a hot-wallet and a security breach could allow hackers to empty your funds.
 
 == Remove plugin ==
 
@@ -66,8 +66,8 @@ Note on security: using this option, while the most secure, requires you to run 
 2. Delete plugin through the 'Plugins' menu in WordPress
 
 == Screenshots == 
-1. Monero Payment Box
-2. Monero Options
+1. Scala Payment Box
+2. Scala Options
 
 == Changelog ==
 
@@ -78,7 +78,7 @@ Note on security: using this option, while the most secure, requires you to run 
 * Added the view key option
 
 = 2.1 =
-* Verify transactions without monero-wallet-rpc
+* Verify transactions without scala-wallet-rpc
 * Optionally accept zero confirmation transactions
 * bug fixing
 
@@ -121,15 +121,15 @@ soon
 
 == Frequently Asked Questions ==
 
-* What is Monero ?
-Monero is completely private, cryptographically secure, digital cash used across the globe. See https://getmonero.org for more information
+* What is Scala ?
+Scala is completely private, cryptographically secure, digital cash used across the globe. See https://getscala.org for more information
 
-* What is a Monero wallet?
-A Monero wallet is a piece of software that allows you to store your funds and interact with the Monero network. You can get a Monero wallet from https://getmonero.org/downloads
+* What is a Scala wallet?
+A Scala wallet is a piece of software that allows you to store your funds and interact with the Scala network. You can get a Scala wallet from https://getscala.org/downloads
 
-* What is monero-wallet-rpc ?
-The monero-wallet-rpc is an RPC server that will allow this plugin to communicate with the Monero network. You can download it from https://getmonero.org/downloads with the command-line tools.
+* What is scala-wallet-rpc ?
+The scala-wallet-rpc is an RPC server that will allow this plugin to communicate with the Scala network. You can download it from https://getscala.org/downloads with the command-line tools.
 
-* Why do I see `[ERROR] Failed to connect to monero-wallet-rpc at localhost port 18080
+* Why do I see `[ERROR] Failed to connect to scala-wallet-rpc at localhost port 18080
 Syntax error: Invalid response data structure: Request id: 1 is different from Response id: ` ?
-This is most likely because this plugin can not reach your monero-wallet-rpc. Make sure that you have supplied the correct host IP and port to the plugin in their fields. If your monero-wallet-rpc is on a different server than your wordpress site, make sure that the appropriate port is open with port forwarding enabled.
+This is most likely because this plugin can not reach your scala-wallet-rpc. Make sure that you have supplied the correct host IP and port to the plugin in their fields. If your scala-wallet-rpc is on a different server than your wordpress site, make sure that the appropriate port is open with port forwarding enabled.

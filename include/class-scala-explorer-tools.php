@@ -1,6 +1,6 @@
 <?php
 /**
- * monero_explorer_tools.php
+ * scala_explorer_tools.php
  *
  * Uses CURL to call API functions from the block explorer
  * https://xmrchain.net/
@@ -13,7 +13,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-class Monero_Explorer_Tools
+class Scala_Explorer_Tools
 {
     private $url;
     public function __construct($testnet = false)
