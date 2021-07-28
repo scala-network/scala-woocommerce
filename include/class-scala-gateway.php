@@ -287,7 +287,7 @@ class Scala_Gateway extends WC_Payment_Gateway
 
         if(isset($price)) {
             $table_name = $wpdb->prefix.'scala_gateway_live_rates';
-            foreach($price['scala'] as $currency=>$rate) {
+            foreach($price['stellite'] as $currency=>$rate) {
                 // shift decimal eight places for precise int storage
                 $rate = intval($rate * 1e8);
                 $query = $wpdb->prepare("INSERT INTO $table_name (currency, rate, updated) VALUES (%s, %d, NOW()) ON DUPLICATE KEY UPDATE rate=%d, updated=NOW()", array($currency, $rate, $rate));
