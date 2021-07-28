@@ -725,7 +725,7 @@ class Scala_Gateway extends WC_Payment_Gateway
             <span class="woocommerce-Price-amount amount" data-price="$price" data-currency="$currency"
         data-rate="$rate" data-rate-type="live">
             $scala_amount_formatted
-            <span class="woocommerce-Price-currencySymbol">XMR</span>
+            <span class="woocommerce-Price-currencySymbol">XLA</span>
         </span>
 
 HTML;
@@ -756,7 +756,7 @@ HTML;
             <span class="woocommerce-Price-amount amount" data-price="$price" data-currency="$currency"
         data-rate="$rate" data-rate-type="fixed">
             $scala_amount_formatted
-            <span class="woocommerce-Price-currencySymbol">XMR</span>
+            <span class="woocommerce-Price-currencySymbol">XLA</span>
         </span>
 
 HTML;

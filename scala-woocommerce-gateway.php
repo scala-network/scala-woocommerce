@@ -108,7 +108,7 @@ function scala_init() {
     function scala_add_currency_symbol($currency_symbol, $currency) {
         switch ($currency) {
         case 'Scala':
-            $currency_symbol = 'XMR';
+            $currency_symbol = 'XLA';
             break;
         }
         return $currency_symbol;
@@ -181,7 +181,7 @@ function scala_init() {
         else
             $rate_formatted = sprintf('%.5f', $rate / 1e8);
 
-        return "<span class=\"scala-price\">1 XMR = $rate_formatted $currency</span>";
+        return "<span class=\"scala-price\">1 XLA = $rate_formatted $currency</span>";
     }
     add_shortcode('scala-price', 'scala_price_func');
 

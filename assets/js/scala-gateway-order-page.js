@@ -62,7 +62,7 @@ function scala_updateDetails() {
             break;
     }
 
-    jQuery('#scala_exchange_rate').html('1 XMR = '+details.rate_formatted+' '+details.currency);
+    jQuery('#scala_exchange_rate').html('1 XLA = '+details.rate_formatted+' '+details.currency);
     jQuery('#scala_total_amount').html(details.amount_total_formatted);
     jQuery('#scala_total_paid').html(details.amount_paid_formatted);
     jQuery('#scala_total_due').html(details.amount_due_formatted);

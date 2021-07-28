@@ -89,12 +89,12 @@ This will display the price of Scala in the selected currency. If no currency is
 ```
 Will display:
 ```
-1 XMR = 123.68000 USD
-1 XMR = 0.01827000 BTC
-1 XMR = 123.68000 USD
-1 XMR = 168.43000 CAD
-1 XMR = 105.54000 EUR
-1 XMR = 94.84000 GBP
+1 XLA = 123.68000 USD
+1 XLA = 0.01827000 BTC
+1 XLA = 123.68000 USD
+1 XLA = 168.43000 CAD
+1 XLA = 105.54000 EUR
+1 XLA = 94.84000 GBP
 ```
 
 

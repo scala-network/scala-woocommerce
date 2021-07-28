@@ -40,7 +40,7 @@
             Total due:
             <strong class="scala_details_row">
                 <span class="scala_details_main">
-                    <span id="scala_total_due"></span> XMR
+                    <span id="scala_total_due"></span> XLA
                 </span>
                 <span class="scala_details_right button-row">
                     <button href="#" class="button clipboard" title="Copy Amount"
@@ -53,13 +53,13 @@
         <li style="display:none">
             Total order amount:
             <strong>
-                <span id="scala_total_amount"></span> XMR
+                <span id="scala_total_amount"></span> XLA
             </strong>
         </li>
         <li>
             Total paid:
             <strong>
-                <span id="scala_total_paid"></span> XMR
+                <span id="scala_total_paid"></span> XLA
             </strong>
         </li>
         <li>
